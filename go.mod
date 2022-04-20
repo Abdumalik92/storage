@@ -1,4 +1,4 @@
-module storage
+module github.com/abdumalik92/storage
 
 go 1.17
 
