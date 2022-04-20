@@ -2,10 +2,15 @@ package main
 
 import (
 	"fmt"
-	"storage2/internal/storage"
+	"log"
+	"storage/internal/storage"
 )
 
 func main() {
 	st := storage.NewStorage()
-	fmt.Println("It's work", st)
+	file, err := st.Upload("f.txt", []byte("Hello world"))
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("It's work", file)
 }
